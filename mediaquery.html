@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media query practice1</title>
+    <link rel="stylesheet" href="css/mediaquery.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+</head>
+
+<body>
+    <div class="skillmaindiv">
+
+        <nav id="menudiv" style="background-color: {{nav}};">
+            <div class="userinput" id="userinput">
+                <div class="useinputbox">
+                    <h1>menubar</h1>
+                    <h1>heading</h1>
+                    <h1>block</h1>
+                </div>
+                <div class="useinputbox">
+                    <input type="color" ng-model="nav">
+
+
+                    <input type="color" ng-model="skill">
+
+                    <input type="color" ng-model="color">
+                </div>
+
+            </div>
+            <button type="button" onclick="userinput()" style="display: block;">
+                select
+             </button>
+
+
+            <h1>The one web technology</h1>
+            <button type="button" onclick="menu()">
+                Menu
+             </button>
+            <ul id="ul">
+                <li id="li"><a id="a" href="">Home</a></li>
+                <li id="li"><a id="a" href="">About</a></li>
+                <li id="li"><a id="a" href="">Contact us</a></li>
+            </ul>
+
+        </nav>
+
+
+        <div class="banner">
+            <h4 style="color: {{skill}};">The One web technology</h4>
+            <p style="color: {{skill}};">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste, accusamus?</p>
+        </div>
+
+
+        <div class="skillframe">
+            <h2 style="color: {{skill}};">Skill</h2>
+            <div class="skillbox">
+                <div class="skillsubbox" style="color: {{color}};">
+                    <i class="fa-brands fa-html5"></i>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iure perspiciatis aspernatur maxime alias id eum.</p>
+                    <h3>HTML</h3>
+                </div>
+            </div>
+            <div class="skillbox">
+                <div class="skillsubbox " style="color: {{color}};">
+                    <i class="fa-brands fa-css3-alt"></i>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iure perspiciatis aspernatur maxime alias id eum.</p>
+                    <h3>CSS</h3>
+                </div>
+            </div>
+            <div class="skillbox">
+                <div class="skillsubbox" style="color: {{color}};">
+                    <i class="fa-brands fa-java"></i>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iure perspiciatis aspernatur maxime alias id eum.</p>
+                    <h3>JAVA</h3>
+                </div>
+            </div>
+            <div class="skillbox" style="color: {{color}};">
+                <div class="skillsubbox " style="color: {{color}};">
+                    <i class="fa-brands fa-bootstrap"></i>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iure perspiciatis aspernatur maxime alias id eum.</p>
+                    <h3>BOOTSTRAP</h3>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script>
+        let ul = document.getElementById("ul").style;
+        let user = document.getElementById("userinput").style;
+
+
+
+
+        function menu() {
+            if (ul.visibility == "hidden") {
+                ul.visibility = "visible";
+                ul.top = "50px";
+                ul.transition = "1s";
+                ul.left = "190px";
+
+            } else {
+                ul.visibility = "hidden";
+                ul.top = "-100px";
+                ul.left = "200px";
+
+
+
+            }
+
+
+
+
+
+        }
+
+        function userinput() {
+            if (user.visibility == "hidden") {
+                user.visibility = "visible";
+                user.top = "50px";
+                user.transition = "1s";
+                user.right = "-200px";
+
+            } else {
+                user.visibility = "hidden";
+                user.top = "-150px";
+                user.right = "-200px";
+
+
+
+            }
+
+
+
+
+
+        }
+    </script>
+    <script src="angularjs/angular.js"></script>
+</body>
+
+</html>
